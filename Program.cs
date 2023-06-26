@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using BuilderAndFluentInterface;
 using BuilderVisitorAndFluentInterfaceDesignPatterns.BuilderDesignPattern;
 using BuilderVisitorAndFluentInterfaceDesignPatterns.FluentInterface;
 using BuilderVisitorAndFluentInterfaceDesignPatterns.VisitorDesignPattern;
@@ -44,6 +45,14 @@ namespace BuilderVisitorAndFluentInterfaceDesignPatterns
 				.Read()
 				.Write();
 
+			#endregion
+
+			#region BuilderWithFluentInterface
+			FluentBuilder
+				.SetItem(new Item())
+				.WithName("item name")
+				.WithDescription("item description")
+				.Build();
 			#endregion
 
 			Console.WriteLine("Hello World!");
